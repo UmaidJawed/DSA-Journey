@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Bubble_Sort {
     public void sort(int arr[], int n) {
-        for (int i = n - 1; i >= 0; i--) {
+        for (int i = n - 1; i >= 1; i--) {
             int didSwap = 0;
             for (int j = 0; j <= i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
