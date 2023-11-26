@@ -17,7 +17,7 @@ class Node {
     }
 }
 
-public class Traversing {
+public class Finding_Length_Of_LL {
     private static Node convertArr2LL(int[] arr) {
         Node head = new Node(arr[0]);
         Node mover = head;
@@ -37,15 +37,12 @@ public class Traversing {
             temp = temp.next;
             count++;
         }
+        return count;
     }
 
     public static void main(String[] args) {
         int[] arr = { 12, 5, 6, 8 };
         Node head = convertArr2LL(arr);
-        Node temp = head;
-        while (temp != null) {
-            System.out.print(temp.data + "-->" + "");
-            temp = temp.next;
-        }
+        System.out.println(lengthOfLL(head));
     }
 }
