@@ -1,5 +1,3 @@
-package Linked_Lists;
-
 import java.util.*;
 
 class Node {
@@ -43,6 +41,12 @@ public class Deletion_In_LL {
         int[] arr = { 12, 5, 6, 8 };
         Node head = convertArr2LL(arr);
         head = deleteHead(head);// calling head function
-        System.out.print(head.data);/* printing the data after deleting the head node in the Linked Lists */
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + "-->" + "");
+            temp = temp.next;
+        }
+        // System.out.print(head.data);/* printing the data after deleting the head node
+        // in the Linked Lists */
     }
 }
