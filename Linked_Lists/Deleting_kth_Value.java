@@ -43,4 +43,39 @@ public class Deleting_kth_Value {
         temp.next = null;
         return head;
     }
+
+    private static Node deletekElement(Node head, int k) {
+        if (head == null)
+            return null;
+
+        if (k == 1) {
+            head = head.next;
+            return head;
+        }
+        int cnt = 0;
+        Node temp = head;
+        Node prev = null;
+        while (temp != null) {
+            cnt++;
+            if (cnt == k) {
+                prev.next = prev.next.next;
+                break;
+            }
+            prev = temp;
+            temp = temp.next;
+        }
+        return head;
+    }
+
+    public static void main(String[] args) {
+        int arr[] = { 12, 5, 6, 8 };
+        Node head = convertArr2LL(arr);
+        head = deletekElement(head, 3);
+        Node temp = head;
+        while (temp != null) {
+            System.out.println(temp.data + "-->" + "");
+            temp = temp.next;
+        }
+
+    }
 }
