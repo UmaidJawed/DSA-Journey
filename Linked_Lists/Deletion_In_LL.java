@@ -1,3 +1,5 @@
+package Linked_Lists;
+
 import java.util.*;
 
 class Node {
