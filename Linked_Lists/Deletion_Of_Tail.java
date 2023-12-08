@@ -39,6 +39,18 @@ public class Deletion_Of_Tail {
         return head;
     }
 
+    private static Node deleteTail(Node head) {
+        if (head == null || head.next == null)
+            return null;
+
+        Node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+        return head;
+    }
+
     public static void main(String[] args) {
         int[] arr = { 12, 5, 6, 8 };
         Node head = convertArr2LL(arr);
