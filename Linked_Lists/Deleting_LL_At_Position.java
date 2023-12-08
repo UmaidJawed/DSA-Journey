@@ -12,7 +12,7 @@ class Node {
     }
 }
 
-public class Deleting_kth_Value {
+public class Deleting_LL_At_Position {
     private static Node convertArr2LL(int arr[]) {
         Node head = new Node(arr[0]);
         Node mover = head;
