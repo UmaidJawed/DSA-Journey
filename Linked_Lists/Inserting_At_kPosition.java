@@ -125,7 +125,7 @@ public class Inserting_At_kPosition {
             if (cnt == k - 1) {
                 Node newNode = new Node(ele);
                 newNode = temp.next;
-                temp = newNode;
+                temp.next = newNode;
                 break;
             }
             temp = temp.next;
