@@ -35,6 +35,8 @@ public class Deleting_Head_DLL {
     }
 
     private static Node delete_head(Node head) {
+        if (head == null || head.next == null)
+            return null;
         Node prev = head;
         head = head.next;
         head.back = null;
