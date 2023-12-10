@@ -1,4 +1,4 @@
-package Linked_Lists.Doubly_Linked-List;
+package Linked_Lists;
 
 import java.util.*;
 
