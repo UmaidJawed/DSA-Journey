@@ -9,7 +9,7 @@ class Node {
     Node(int data1, Node next1, Node back1) {
         this.data = data1;
         this.next = next1;
-        this.next = back1;
+        this.back = back1;
     }
 
     Node(int data1) {
