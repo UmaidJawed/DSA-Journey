@@ -22,6 +22,7 @@ class Node {
 
 public class Delete_Tail_DLL {
     private static Node convertArrtoDLL(int arr[]) {
+
         Node head = new Node(arr[0]);
         Node prev = head;
         for (int i = 1; i < arr.length; i++) {
@@ -35,6 +36,9 @@ public class Delete_Tail_DLL {
     }
 
     private static Node delete_head(Node head) {
+        if (head == null || head.next == null)
+            return null;
+
         Node prev = head;
         head = head.next;
         head.back = null;
@@ -43,6 +47,9 @@ public class Delete_Tail_DLL {
     }
 
     private static Node delete_Tail(Node head) {
+        if (head == null || head.next == null)
+            return null;
+
         Node tail = head;
         while (tail.next != null) {
             tail = tail.next;
