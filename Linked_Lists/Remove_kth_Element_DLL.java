@@ -80,31 +80,31 @@ public class Remove_kth_Element_DLL {
         }
 
         else if (prev == null) {
-            delete_head(head);
-            return head;
+            return delete_head(head);
         }
 
         else if (front == null) {
-            delete_Tail(head);
-            return head;
+            return delete_Tail(head);
         }
-        /*
-         * making prev node pointing next to front node And
-         * making front node pointing back to the prev node
-         */
-        prev.next = front;
-        front.back = prev;
-        // removing temp connection with the prev and front node
-        temp.next = null;
-        temp.back = null;
 
+        else {
+            /*
+             * making prev node pointing next to front node And
+             * making front node pointing back to the prev node
+             */
+            prev.next = front;
+            front.back = prev;
+            // removing temp connection with the prev and front node
+            temp.next = null;
+            temp.back = null;
+        }
         return head;
     }
 
     public static void main(String[] args) {
         int arr[] = { 12, 5, 6, 8 };
         Node head = convertArrtoDLL(arr);
-        head = removekthElement(head, 2);
+        head = removekthElement(head, 3);
         Node temp = head;
         while (temp != null) {
             System.out.print(temp.data + "-->" + "");
