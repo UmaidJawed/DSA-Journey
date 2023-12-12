@@ -36,11 +36,14 @@ public class Insert_BeforeTail_DLL {
 
     private static Node insert_BeforeTail(Node head, int val) {
         Node tail = head;
-        if (tail == null) {
+        if (head == null) {
             Node temp = new Node(val);
             temp.next = null;
             temp.back = null;
             return temp;
+        }
+        if (head.next == null) {
+            return insert_BeforeTail(head, val);
         }
         while (tail.next != null) {
             tail = tail.next;
