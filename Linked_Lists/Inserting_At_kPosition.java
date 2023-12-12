@@ -24,6 +24,7 @@ public class Inserting_At_kPosition {
         for (int i = 1; i < arr.length; i++) {
             Node temp = new Node(arr[i]);
             mover.next = temp;
+            mover = temp;
         }
         return head;
     }
@@ -122,6 +123,7 @@ public class Inserting_At_kPosition {
         if (k == 1) {
             Node Newnode = new Node(ele);
             Newnode.next = head;
+            return Newnode;
         }
         int cnt = 0;
         Node temp = head;
@@ -129,7 +131,7 @@ public class Inserting_At_kPosition {
             cnt++;
             if (cnt == k - 1) {
                 Node newNode = new Node(ele);
-                newNode = temp.next;
+                newNode.next = temp.next;
                 temp.next = newNode;
                 break;
             }
@@ -144,7 +146,7 @@ public class Inserting_At_kPosition {
         head = inesertAtK(head, 100, 2);
         Node temp = head;
         while (temp != null) {
-            System.out.println(temp.data + "-->" + "");
+            System.out.print(temp.data + "-->" + "");
             temp = temp.next;
         }
 
