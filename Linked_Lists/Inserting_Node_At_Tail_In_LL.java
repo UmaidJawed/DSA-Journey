@@ -24,6 +24,7 @@ public class Inserting_Node_At_Tail_In_LL {
         for (int i = 1; i < arr.length; i++) {
             Node temp = new Node(arr[i]);
             mover.next = temp;
+            mover = temp;
         }
         return head;
     }
