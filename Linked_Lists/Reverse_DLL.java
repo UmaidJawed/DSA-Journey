@@ -65,6 +65,9 @@ public class Reverse_DLL {
             // This step reverses the links
             current.next = prev;
 
+            // updating prev
+            prev = current;
+
             // Move to the next node
             // in the orignal list
 
@@ -73,7 +76,7 @@ public class Reverse_DLL {
 
         // The final node in the original list
         // becomes the new head after reversal
-        return prev.back;
+        return prev;
     }
 
     public static void main(String[] args) {
