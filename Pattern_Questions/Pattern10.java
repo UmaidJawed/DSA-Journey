@@ -1,5 +1,6 @@
 package Pattern_Questions;
 
+//Half Diamond Star Pattern
 public class Pattern10 {
     public static void nStarTriangle(int n) {
         for (int i = 1; i <= 2 * n - 1; i++) {
