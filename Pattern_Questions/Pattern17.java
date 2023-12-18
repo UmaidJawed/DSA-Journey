@@ -1,5 +1,6 @@
 package Pattern_Questions;
 
+//Alpha-Hill Pattern
 import java.util.Scanner;
 
 public class Pattern17 {
