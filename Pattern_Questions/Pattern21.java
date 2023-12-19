@@ -1,5 +1,6 @@
 package Pattern_Questions;
 
+//Hollow Rectangle Pattern
 public class Pattern21 {
     public static void getStarPattern(int n) {
         for (int i = 0; i < n; i++) {
