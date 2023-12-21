@@ -41,6 +41,10 @@ public class Intro_To_Stack {
         return top + 1;
     }
 
+    public boolean isFull() {
+        return top == 1;
+    }
+
     public boolean isEmpty() {
         return top == -1;
     }
