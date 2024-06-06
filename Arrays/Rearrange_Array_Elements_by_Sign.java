@@ -1,5 +1,4 @@
-public class Rearrange Array_Elements_by_Sign
-{
+public class Rearrange_Array_Elements_by_Sign {
 
     public int[] rearrangeArray(int[] nums) {
         int n = nums.length;
