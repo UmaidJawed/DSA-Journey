@@ -1,5 +1,6 @@
 package Arrays;
 
+//Using Two Pointer Approach
 public class Sum_of_Square_Numbers {
     public boolean judgeSquareSum(int c) {
         long left = 0;
