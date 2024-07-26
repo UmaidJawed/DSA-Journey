@@ -10,6 +10,7 @@ public class Search_In_Rotated_Sorted_Array {
             if (nums[mid] == target)
                 return mid;
 
+            // Checking if left is sorted
             if (nums[low] <= nums[mid]) {
                 if (nums[low] <= target && target <= nums[mid]) {
                     high = mid - 1;
@@ -18,6 +19,7 @@ public class Search_In_Rotated_Sorted_Array {
                 }
             }
 
+            // Checking if right is sorted
             else {
                 if (nums[mid] <= target && target <= nums[high]) {
                     low = mid + 1;
