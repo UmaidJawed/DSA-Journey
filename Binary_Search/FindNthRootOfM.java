@@ -5,16 +5,15 @@ public class FindNthRootOfM {
     public int NthRoot(int n, int m) {
         int low = 1, high = m;
 
-        if (m == 0)
-            return m;
-
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            if (fun(mid, n) == m) {
+            int midN = fun(mid, n, m);
+
+            if (midN == 1) {
                 return mid;
             }
 
-            else if (fun(mid, n) < m) {
+            else if (midN == 0) {
                 low = mid + 1;
             }
 
@@ -26,7 +25,23 @@ public class FindNthRootOfM {
         return -1;
     }
 
-    static int fun(int i, int n) {
-        return (int) Math.pow(i, n);
+    /*
+     * Using this approach inorder to avoid Overflow of the data:
+     * return 0 if < m
+     * return 1 if = m
+     * return 2 if > m
+     */
+
+    static int fun(int mid, int n, int m) {
+        long ans = 1;
+        for (int i = 1; i <= n; i++) {
+            ans = ans * mid;
+            if (ans > m)
+                return 2;
+        }
+        if (ans == m)
+            return 1;
+
+        return 0;
     }
 }
