@@ -3,7 +3,6 @@ package Binary_Search;
 public class FindNthRootOfM {
 
     public int NthRoot(int n, int m) {
-        int ans = -1;
         int low = 1, high = m;
 
         if (m == 0)
@@ -12,13 +11,11 @@ public class FindNthRootOfM {
         while (low <= high) {
             int mid = low + (high - low) / 2;
             if (fun(mid, n) == m) {
-                ans = mid;
-                return ans;
+                return mid;
             }
 
             else if (fun(mid, n) < m) {
                 low = mid + 1;
-                ans = mid;
             }
 
             else {
