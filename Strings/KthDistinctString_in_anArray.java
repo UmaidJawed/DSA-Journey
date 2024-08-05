@@ -1,7 +1,8 @@
 package Strings
 
-public class Kth DistinctString_in_anArray
-{
+import java.util.*;
+
+public class KthDistinctString_in_anArray {
 
     public String kthDistinct(String[] arr, int k) {
         int n = arr.length;
